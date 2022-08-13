@@ -4,6 +4,7 @@ services:
   app:
     container_name: react
     image: react
+    command: sh -c "npm rebuild esbuild && yarn dev"
     build:
       context: ./react
       dockerfile: Dockerfile
