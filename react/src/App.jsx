@@ -1,10 +1,21 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { useEffect } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  useEffect(() => {
+
+    fetch("http://localhost:4000/alive").then(r => {
+      // console.log({ r });
+      return r.json()
+    }).then((r) => {
+      console.log(r);
+    })
+
+  }, [])
   return (
     <div className="App">
       <div>
