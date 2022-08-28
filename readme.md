@@ -23,6 +23,6 @@
 ## SSH to container
 
 ```sh
-        docker exec -it a25cbe20f0f9 /bin/sh
+        docker exec -it 674fd2f939e5 /bin/sh
         docker exec -it <container-ID> /bin/sh
 ```

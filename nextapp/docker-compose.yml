@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: react-next-pod
+    image: react-next
+    # command: sh -c "npm rebuild esbuild && yarn dev --host"
+    command: sh -c "yarn dev"
+    build:
+      # Where build docker image is
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      # - ./react:/app/react
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    # entrypoint: yarn
