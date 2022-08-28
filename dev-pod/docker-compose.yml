@@ -4,14 +4,15 @@ services:
   app:
     container_name: react
     image: react
-    command: sh -c "npm rebuild esbuild && yarn dev"
+    command: sh -c "npm rebuild esbuild && yarn dev --host"
     build:
       context: ./react
       dockerfile: Dockerfile
     volumes:
-      - .:/app/react
+      - ./react:/app/react
       # - ./react:/app/react
     ports:
       - 3000:3000
+      - 3010:3010
     stdin_open: true
     tty: true
