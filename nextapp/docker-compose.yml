@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 
 services:
   app:
@@ -13,6 +13,7 @@ services:
     volumes:
       - .:/app
       # - ./react:/app/react
+      - /app/node_modules
     ports:
       - "3000:3000"
     stdin_open: true
