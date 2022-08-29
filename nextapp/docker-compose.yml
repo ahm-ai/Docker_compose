@@ -4,6 +4,7 @@ services:
   app:
     container_name: react-next-pod
     image: react-next
+    platform: linux/amd64
     # command: sh -c "npm rebuild esbuild && yarn dev --host"
     command: sh -c "yarn dev"
     build:
