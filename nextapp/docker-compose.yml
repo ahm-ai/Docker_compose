@@ -11,8 +11,9 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
+      # Specify an absolute path mapping Example :: - ./myfolder/location:/container/location
       - .:/app
-      # - ./react:/app/react
+      # ContainerLocation - Just specify a path and let the Engine create a volume
       - /app/node_modules
     ports:
       - "3000:3000"
