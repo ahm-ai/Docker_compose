@@ -8,12 +8,12 @@ services:
     # command: sh -c "npm rebuild esbuild && yarn dev --host"
     command: sh -c "yarn dev"
     build:
-      # Where build docker image is
+      # Specify where your docker file is
       context: .
       dockerfile: Dockerfile
     volumes:
       # Specify an absolute path mapping Example :: - ./myfolder/location:/container/location
-      - .:/app
+      - .:/app # Syncs . : /app  ::: Syncs current with the app folder
       # Don't overide the modules from the container
       - /app/node_modules
     ports:
