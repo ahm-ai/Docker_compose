@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      # Specify an absolute path mapping Example :: - ./myfolder/location:/container/location
+      # Disable if you don't want to sync
       - .:/app # Syncs . : /app  ::: Syncs current with the app folder
       # Don't overide the modules from the container
       - /app/node_modules
